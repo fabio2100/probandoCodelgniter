@@ -2,16 +2,18 @@
 <?php if(!empty($comentarios) && is_array($comentarios)): ?>
 
 <style>
-    table,th,td{
+    table th{
+        cursor: pointer;
+        border: 0.5px solid white;
+        background-color: silver;
+    },
+    table,td{
         border: 0.5px solid white;
         background-color: silver;
         box-shadow: 10px 10px 5px 0px rgba(192,172,172,0.75);
-    },
-    i:hover{
-        cursor: pointer;
     }
 </style>
-<table class='table'>
+<table class='table sortable'>
     <thead>
         <th>Comentario</th>
         <th>Fecha</th>
@@ -24,6 +26,7 @@
 
     </tbody>    
 </table>
+<script src="js/sorttable.js"></script>
 <?php else: ?>
 <h1>Aún no hay comentarios</h1>
 <?php endif ?>
